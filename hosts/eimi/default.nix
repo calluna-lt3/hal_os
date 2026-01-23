@@ -39,9 +39,11 @@ inputs.nixpkgs.lib.nixosSystem {
             sops.enable = true;
             sway.enable = true;
             keyd.enable = true;
+            ssh.enable = true;
             etc.enable = true;
             home = {
                 "1password".enable = true;
+                steam.enable = true;
                 bash.enable = true;
                 git.enable = true;
                 zathura.enable = true;

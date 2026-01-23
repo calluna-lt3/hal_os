@@ -14,6 +14,7 @@
 
         users.users."mlwpsh".openssh.authorizedKeys.keys = [
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINjzfMoC4FP7zg5sVO9WbeduubA48fYNJK6cgjESWrr8 eimi"
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHl8EONsjmfAp3z4fVAdrH0ruRZhnhCH8hP5HzFoHlEf verdant"
         ];
     };
 }
