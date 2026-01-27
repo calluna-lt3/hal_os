@@ -23,10 +23,11 @@ inputs.nixpkgs.lib.nixosSystem {
                 hostname = "verdant";
             };
 
-
             sops.enable = true;
             ssh.enable = true;
             sway.enable = true;
+            python.enable = true;
+            lua.enable = true;
             etc.enable = true;
             home = {
                 "1password".enable = true;

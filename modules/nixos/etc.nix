@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
     options.etc.enable = lib.mkEnableOption "etc ####";
@@ -15,7 +15,6 @@
             # programming
             ghc
             haskell-language-server
-            lua
             gcc
             clang
             clang-tools
