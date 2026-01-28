@@ -40,6 +40,8 @@ inputs.nixpkgs.lib.nixosSystem {
             sway.enable = true;
             keyd.enable = true;
             ssh.enable = true;
+            python.enable = true;
+            lua.enable = true;
             etc.enable = true;
             home = {
                 "1password".enable = true;
