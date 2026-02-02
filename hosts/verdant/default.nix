@@ -7,8 +7,7 @@ inputs.nixpkgs.lib.nixosSystem {
         inputs.home-manager.nixosModules.default
         inputs.sops-nix.nixosModules.default
         ./hardware.nix
-        ../../modules/nixos
-        ../../modules/home
+        ../../modules
         ({ config, ... } :{
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
             boot.loader.systemd-boot.enable = true;
