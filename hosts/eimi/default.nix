@@ -7,9 +7,8 @@ inputs.nixpkgs.lib.nixosSystem {
         inputs.home-manager.nixosModules.default
         inputs.sops-nix.nixosModules.sops
         ./hardware.nix
-        ../../modules/nixos
-        ../../modules/home
-        {
+        ../../modules
+        ({ config, ... }: {
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
             boot.loader.systemd-boot.enable = true;
             boot.loader.efi.canTouchEfiVariables = true;
@@ -29,7 +28,7 @@ inputs.nixpkgs.lib.nixosSystem {
                 pulse.enable = true;
             };
 
-            # programs.nix-ld.enable = true; # ?
+            # programs.nix-ld.enable = true;
 
             networking = {
                 enable = true;
@@ -54,6 +53,6 @@ inputs.nixpkgs.lib.nixosSystem {
 
             # <3
             system.stateVersion = "25.11";
-        }
+        })
     ];
 }

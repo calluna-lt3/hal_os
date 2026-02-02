@@ -9,7 +9,7 @@ inputs.nixpkgs.lib.nixosSystem {
         ./hardware.nix
         ../../modules/nixos
         ../../modules/home
-        {
+        ({ config, ... } :{
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
             boot.loader.systemd-boot.enable = true;
             boot.loader.efi.canTouchEfiVariables = true;
@@ -21,6 +21,10 @@ inputs.nixpkgs.lib.nixosSystem {
             networking = {
                 enable = true;
                 hostname = "verdant";
+            };
+
+            verdant = {
+                wireguard.enable = true;
             };
 
             sops.enable = true;
@@ -38,8 +42,10 @@ inputs.nixpkgs.lib.nixosSystem {
                 etc.enable = true;
             };
 
+            programs.nix-ld.enable = true; # ?
+
             # :<
             system.stateVersion = "25.11";
-        }
+        })
     ];
 }

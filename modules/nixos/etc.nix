@@ -39,7 +39,6 @@
             zip
 
             # extra
-            wireguard-tools
             fastfetch
             age
             gnupg
@@ -48,6 +47,9 @@
             imv
             ffmpeg
             mpv
+
+            temurin-bin-17
+            waywall
         ];
 
         fonts.packages = with pkgs; [

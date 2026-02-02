@@ -17,10 +17,11 @@
                 weechat
                 lutris
                 rustfmt
+                xfce.thunar
 
                 (prismlauncher.override {
                     additionalPrograms = [ libxtst ];
-                    jdks = [ temurin-jre-bin ];
+                    jdks = [ temurin-bin-17 ];
                 })
             ];
         };

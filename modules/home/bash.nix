@@ -8,13 +8,14 @@
             enableCompletion = true;
             sessionVariables = {
                 MANPAGER = "$HOME/.local/bin/nvim -c 'set signcolumn=no' +Man!";
-                PATH = "$PATH:$HOME/.scripts/:$HOME/storage/bin";
+                PATH = "$PATH:$HOME/.scripts/:$HOME/.local/bin";
                 LD_LIBRARY_PATH = "LD_LIBRARY_PATH:/usr/local/lib";
                 BROWSER = "librewolf";
                 EDITOR = "$HOME/.local/bin/nvim";
                 VIMRUNTIME = "$HOME/.local/share/nvim/runtime";
                 HISTFILESIZE = "";
                 HISTSIZE = "";
+                GIT_PS1_SHOWDIRTYSTATE = 1;
 
                 # obs pipewire compatibility
                 XDG_CURRENT_DESKTOP = "sway";
