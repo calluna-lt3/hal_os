@@ -1,10 +1,7 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-    options.verdant.wireguard = {
-        enable = lib.mkEnableOption "wireguarddddd";
-    };
-
+    options.verdant.wireguard.enable = lib.mkEnableOption "wireguarddddd";
     config = lib.mkIf config.verdant.wireguard.enable {
         environment.systemPackages = with pkgs; [ wireguard-tools ];
 
