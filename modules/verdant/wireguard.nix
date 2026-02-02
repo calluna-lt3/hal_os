@@ -3,9 +3,6 @@
 {
     options.verdant.wireguard.enable = lib.mkEnableOption "wireguarddddd";
     config = lib.mkIf config.verdant.wireguard.enable {
-        environment.systemPackages = with pkgs; [ wireguard-tools ];
-
-        networking.firewall.allowedUDPPorts = [ 46752 ];
         sops.secrets."wireguard/preshared/verdant" = { };
         sops.secrets."wireguard/private/verdant" = { };
         sops.secrets."wireguard/public/verdant" = { };
@@ -25,6 +22,13 @@
                 Endpoint = ${config.sops.placeholder."wireguard/endpoint"}
                 PersistentKeepalive = 25
             '';
+        };
+
+        environment.systemPackages = with pkgs; [ wireguard-tools ];
+        networking.firewall.allowedUDPPorts = [ 46752 ];
+        networking.wg-quick.interfaces.wg0 = {
+            configFile = "/etc/wireguard/wg0.conf";
+            autostart = true;
         };
     };
 }
