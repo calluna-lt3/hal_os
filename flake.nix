@@ -11,11 +11,14 @@
             url                    = "github:Mic92/sops-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        mcsr-nixos = {
+            url                    = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { self, nixpkgs, ... } @ inputs:
+    outputs = { self, nixpkgs, mcsr-nixos, ... } @ inputs:
     let
-
     in {
         nixosConfigurations = {
             eimi    = import ./hosts/eimi    { inherit inputs; };

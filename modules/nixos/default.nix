@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./mcsr
         ./users.nix
         ./keyd.nix
         ./networking.nix

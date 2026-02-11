@@ -8,7 +8,7 @@ inputs.nixpkgs.lib.nixosSystem {
         inputs.sops-nix.nixosModules.sops
         ./hardware.nix
         ../../modules
-        ({ config, ... }: {
+        {
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
             boot.loader.systemd-boot.enable = true;
             boot.loader.efi.canTouchEfiVariables = true;
@@ -28,7 +28,7 @@ inputs.nixpkgs.lib.nixosSystem {
                 pulse.enable = true;
             };
 
-            # programs.nix-ld.enable = true;
+            programs.nix-ld.enable = true;
 
             networking = {
                 enable = true;
@@ -41,6 +41,7 @@ inputs.nixpkgs.lib.nixosSystem {
             ssh.enable = true;
             python.enable = true;
             lua.enable = true;
+            mcsr.enable = true;
             etc.enable = true;
             home = {
                 "1password".enable = true;
@@ -53,6 +54,6 @@ inputs.nixpkgs.lib.nixosSystem {
 
             # <3
             system.stateVersion = "25.11";
-        })
+        }
     ];
 }

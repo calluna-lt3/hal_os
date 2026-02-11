@@ -49,7 +49,6 @@
             mpv
 
             temurin-bin-17
-            waywall
         ];
 
         fonts.packages = with pkgs; [

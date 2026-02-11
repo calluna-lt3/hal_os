@@ -18,11 +18,6 @@
                 lutris
                 rustfmt
                 xfce.thunar
-
-                (prismlauncher.override {
-                    additionalPrograms = [ libxtst ];
-                    jdks = [ temurin-bin-17 ];
-                })
             ];
         };
     };
