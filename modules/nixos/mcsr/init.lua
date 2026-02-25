@@ -39,7 +39,11 @@ scene:register("e_counter", {
     kind = "mirror",
     options = {
         src = { x = 1, y = 37, w = 49, h = 9 },
-        dst = { x = 150, y = 495, w = 490, h = 90 }
+        dst = { x = 145, y = 490, w = 500, h = 100 },
+        color_key = {
+            input = "#dddddd",
+            output = "#dddddd",
+        },
     },
     groups = { "thin" },
 })
@@ -60,6 +64,36 @@ scene:register("eye_overlay", {
         dst = { x = 0, y = 370, w = 790, h = 340 },
     },
     groups = { "tall" },
+})
+
+scene:register("bgr_thin", {
+    kind = "image",
+    path = files.thin,
+    options = {
+        dst = { x = 0, y = 0, w = resolution.default.w, h = resolution.default.h },
+        depth = -1,
+    },
+    groups = { "thin" },
+})
+
+scene:register("bgr_tall", {
+    kind = "image",
+    path = files.tall,
+    options = {
+        dst = { x = 0, y = 0, w = resolution.default.w, h = resolution.default.h },
+        depth = -1,
+    },
+    groups = { "tall" },
+})
+
+scene:register("bgr_wide", {
+    kind = "image",
+    path = files.wide,
+    options = {
+        dst = { x = 0, y = 0, w = resolution.default.w, h = resolution.default.h },
+        depth = -1,
+    },
+    groups = { "wide" },
 })
 
 ModeManager:define("thin", {

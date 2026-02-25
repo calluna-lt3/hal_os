@@ -19,6 +19,9 @@ in {
                 programs = [ mcsrPkgs.ninjabrain-bot ];
                 files = {
                     eye_overlay = ./eye-overlay.png;
+                    thin = ./thin.png;
+                    tall = ./tall.png;
+                    wide = ./wide.png;
                 };
 
                 source = ./init.lua;
