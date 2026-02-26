@@ -17,7 +17,7 @@
                 weechat
                 lutris
                 rustfmt
-                xfce.thunar
+                thunar
             ];
         };
     };
