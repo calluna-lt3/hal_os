@@ -16,6 +16,7 @@
                 HISTFILESIZE = "";
                 HISTSIZE = "";
                 GIT_PS1_SHOWDIRTYSTATE = 1;
+                NIX_SHELL_PRESERVE_PROMPT = 1;
 
                 # obs pipewire compatibility
                 XDG_CURRENT_DESKTOP = "sway";
@@ -23,7 +24,8 @@
 
             initExtra = ''
                 . $HOME/.local/bin/git-prompt.sh
-                export PS1=' [\h] $(__git_ps1 "(%s) ")\W/ \[\e[1;\]\[$([[ $? = 0 ]] && printf 35 || printf 31)m\]<3\[\e[0m\] '
+                . $HOME/.scripts/nixshellquestionmark
+                export PS1=' [\h] $(__git_ps1 "(%s) ")\W/ $(__nixshell_ps1 "%s ")\[\e[1;\]\[$([[ $? = 0 ]] && printf 35 || printf 31)m\]<3\[\e[0m\] '
                 '';
 
             shellAliases = {
