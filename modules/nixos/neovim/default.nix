@@ -140,7 +140,7 @@
             }
             {
                 mode = "n";
-                key = "<leader>q";
+                key = "<leader>g";
                 action = "<CMD>Git<CR>";
             }
             {
@@ -161,24 +161,24 @@
             }
             {
                 mode = "n";
-                key = "<C-g>";
+                key = "<C-q>";
                 action.__raw = ''
                     function()
-                        require("grapple").toggle_tags({ scope = "global" }) 
+                        require("grapple").toggle_tags({ scope = "global" })
                     end
                     '';
             }
 
             {
                 mode = "n";
-                key = "<leader>a";
+                key = "<leader>e";
                 action.__raw = ''
                     require("grapple").tag
                     '';
             }
             {
                 mode = "n";
-                key = "<leader>ga";
+                key = "<leader>q";
                 action.__raw = ''
                     function()
                         require("grapple").tag({ scope = "global" })
