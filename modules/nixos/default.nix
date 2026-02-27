@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./neovim
         ./mcsr
         ./users.nix
         ./keyd.nix

@@ -7,12 +7,11 @@
             enable = true;
             enableCompletion = true;
             sessionVariables = {
-                MANPAGER = "$HOME/.local/bin/nvim -c 'set signcolumn=no' +Man!";
+                MANPAGER = "nvim -c 'set signcolumn=no' +Man!";
                 PATH = "$PATH:$HOME/.scripts/:$HOME/.local/bin";
                 LD_LIBRARY_PATH = "LD_LIBRARY_PATH:/usr/local/lib";
                 BROWSER = "librewolf";
-                EDITOR = "$HOME/.local/bin/nvim";
-                VIMRUNTIME = "$HOME/.local/share/nvim/runtime";
+                EDITOR = "nvim";
                 HISTFILESIZE = "";
                 HISTSIZE = "";
                 GIT_PS1_SHOWDIRTYSTATE = 1;
@@ -36,9 +35,8 @@
                 "..." = "cd ./../..";
                 "...." = "cd ./../../..";
                 "vp" = "zathura ";
-                "vi" = "$HOME/.local/bin/nvim";
-                "vim" = "$HOME/.local/bin/nvim";
-                "nvim" = "$HOME/.local/bin/nvim";
+                "vi" = "nvim";
+                "vim" = "nvim";
                 "pet" = "touch";
                 "sf" = "cd '$(dirname $(find $HOME/storage $HOME/ -type f | fzf ))'";
                 "sd" = "cd '$(find $HOME/storage/ $HOME/ -type d | fzf)'";

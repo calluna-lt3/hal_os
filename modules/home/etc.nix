@@ -8,7 +8,6 @@
                 discord
                 kdePackages.kdenlive
                 librewolf
-                neovim
                 nicotine-plus
                 obs-studio
                 ripgrep

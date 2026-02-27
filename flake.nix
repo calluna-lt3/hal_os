@@ -15,6 +15,11 @@
             url                    = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        nixvim = {
+            url = "github:nix-community/nixvim";
+            # see docs as to why we don't do the following
+            # inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = { self, nixpkgs, mcsr-nixos, ... } @ inputs:

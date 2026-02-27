@@ -42,12 +42,12 @@
             fastfetch
             age
             gnupg
-            texliveFull
             fzf
             imv
             ffmpeg
             mpv
 
+            ccache
             temurin-bin-17
         ];
 
