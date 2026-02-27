@@ -271,7 +271,7 @@
 
                     vim.keymap.set('n', 'K', '<CMD>lua vim.lsp.buf.hover()<CR>', opts)
                     vim.keymap.set('n', 'E', '<CMD>lua vim.diagnostic.open_float()<CR>', opts)
-                    vim.keymap.set('n', '<leader>ln', '<CMD>lua vim.lsp.buf.rename()<CR>')
+                    vim.keymap.set('n', '<leader>n', '<CMD>lua vim.lsp.buf.rename()<CR>')
                     '';
 
             };
@@ -318,19 +318,19 @@
                         mode = "n";
                         action = "grep_string";
                     };
-                    "<leader>lr" = {
+                    "<leader>r" = {
                         mode = "n";
                         action = "lsp_references";
                     };
-                    "<leader>ld" = {
+                    "<leader>d" = {
                         mode = "n";
                         action = "lsp_definitions";
                     };
-                    "<leader>li" = {
+                    "<leader>i" = {
                         mode = "n";
                         action = "lsp_implementations";
                     };
-                    "<leader>lt" = {
+                    "<leader>t" = {
                         mode = "n";
                         action = "lsp_type_definitions";
                     };
