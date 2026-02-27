@@ -140,6 +140,11 @@
             }
             {
                 mode = "n";
+                key = "<leader>q";
+                action = "<CMD>Git<CR>";
+            }
+            {
+                mode = "n";
                 key = "<leader>lf";
                 action.__raw = ''
                     function()
@@ -222,6 +227,7 @@
             # SHUT UPPP
             web-devicons.enable = true;
             undotree.enable = true;
+            fugitive.enable = true;
             vimtex = {
                 enable = true;
                 texlivePackage = pkgs.texlive.combined.scheme-full;
