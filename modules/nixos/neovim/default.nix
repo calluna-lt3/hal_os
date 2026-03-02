@@ -225,7 +225,7 @@
 
         plugins = {
             # SHUT UPPP
-            web-devicons.enable = true;
+            web-devicons.enable = false;
             undotree.enable = true;
             fugitive.enable = true;
             vimtex = {
@@ -302,15 +302,6 @@
             };
             telescope = {
                 enable = true;
-                settings.pickers = {
-                    find_files.disable_devicons = true;
-                    live_grep.disable_devicons = true;
-                    grep_string.disable_devicons = true;
-                    lsp_references.disable_devicons = true;
-                    lsp_definitions.disable_devicons = true;
-                    lsp_implementations.disable_devicons = true;
-                    lsp_type_definitions.disable_devicons = true;
-                };
                 keymaps = {
                     "<leader>f" = {
                         mode = "n";
