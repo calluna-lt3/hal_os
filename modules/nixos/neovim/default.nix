@@ -38,7 +38,7 @@
             listchars.__raw = "{ tab = '> ', trail = '$' }";
         };
 
-        colorscheme = "ashen";
+        colorscheme = "fogbell";
 
         keymaps = [
             {
@@ -228,6 +228,7 @@
             web-devicons.enable = false;
             undotree.enable = true;
             fugitive.enable = true;
+            hardtime.enable = true;
             vimtex = {
                 enable = true;
                 texlivePackage = pkgs.texlive.combined.scheme-full;
@@ -270,6 +271,7 @@
                     lua_ls.enable = true;
                     nil_ls.enable = true;
                     pyright.enable = true;
+                    ts_ls.enable = true;
                 };
 
                 onAttach = ''
@@ -338,14 +340,24 @@
         extraPlugins = with pkgs; [
             vimPlugins.grapple-nvim
             (vimUtils.buildVimPlugin {
-                name = "ashen.nvim";
+                name = "fogbell.vim";
                 src = fetchFromGitHub {
-                    owner = "ficd0";
-                    repo = "ashen.nvim";
-                    rev = "bfb04bd50b69d863469b2deb9fb361cf0d945ba7";
-                    hash = "sha256-yC9V58zieE8YvEuAnJhEOgONrudUJgQFqC59cKo97/g=";
+                    owner = "jaredgorski";
+                    repo = "fogbell.vim";
+                    rev = "274cc13184f6a7d0589650c0763c94cef431b319";
+                    hash = "sha256-wBGzWeXvoMM2VTGP2G/X+259G5GN5HornTelbGyJ9B0=";
                 };
             })
+
+            # (vimUtils.buildVimPlugin {
+            #     name = "ashen.nvim";
+            #     src = fetchFromGitHub {
+            #         owner = "ficd0";
+            #         repo = "ashen.nvim";
+            #         rev = "bfb04bd50b69d863469b2deb9fb361cf0d945ba7";
+            #         hash = "sha256-yC9V58zieE8YvEuAnJhEOgONrudUJgQFqC59cKo97/g=";
+            #     };
+            # })
 
             # fails require checks, look into this later
             # (vimUtils.buildVimPlugin {

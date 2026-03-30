@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./services
         ./neovim
         ./mcsr
         ./users.nix
@@ -12,6 +13,7 @@
         ./lua.nix
         ./ssh.nix
         ./python.nix
+        ./virtualbox.nix
         ./etc.nix
     ];
 }

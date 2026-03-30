@@ -11,7 +11,8 @@
                 ids = [ "*" ]; # TODO
                 settings = {
                     main = {
-                        alt = "f3";
+                        alt = "f";
+                        f = "y";
                     };
                 };
             };

@@ -10,6 +10,9 @@
                 librewolf
                 nicotine-plus
                 obs-studio
+                xdg-desktop-portal
+                xdg-desktop-portal-wlr
+
                 ripgrep
                 strawberry
                 krita

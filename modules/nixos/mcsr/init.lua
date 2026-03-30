@@ -134,6 +134,11 @@ ModeManager:define("wide", {
 local config = {
     input = {
         sensitivity = normal_sens,
+        remaps = {
+            ["MB4"] = "F3",
+            ["T"] = "F",
+            ["F"] = "Y",
+        },
     },
     theme = {
         background = "#00000000",

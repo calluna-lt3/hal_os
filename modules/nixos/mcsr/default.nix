@@ -12,6 +12,13 @@ in {
             })
         ];
 
+        # https://its-saanvi.github.io/linux-mcsr/drag-clicking.html
+        environment.etc."libinput/local-overrides.quirks".text = ''
+            [Never Debounce]
+            MatchUdevType=mouse
+            ModelBouncingKeys=1
+            '';
+
         programs.waywall = {
             enable = true;
             config = {

@@ -36,6 +36,10 @@ inputs.nixpkgs.lib.nixosSystem {
                 hostname = "eimi";
             };
 
+            services = {
+                proxmox-status.enable = true;
+            };
+
             sops.enable = true;
             sway.enable = true;
             keyd.enable = true;
@@ -43,6 +47,7 @@ inputs.nixpkgs.lib.nixosSystem {
             python.enable = true;
             lua.enable = true;
             mcsr.enable = true;
+            vbox.enable = true;
             etc.enable = true;
             home = {
                 "1password".enable = true;

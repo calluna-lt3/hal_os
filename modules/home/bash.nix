@@ -14,11 +14,13 @@
                 EDITOR = "nvim";
                 HISTFILESIZE = "";
                 HISTSIZE = "";
-                GIT_PS1_SHOWDIRTYSTATE = 1;
-                NIX_SHELL_PRESERVE_PROMPT = 1;
+                GRIM_DEFAULT_DIR = "/tmp";
 
                 # obs pipewire compatibility
                 XDG_CURRENT_DESKTOP = "sway";
+
+                GIT_PS1_SHOWDIRTYSTATE = 1;
+                NIX_SHELL_PRESERVE_PROMPT = 1;
             };
 
             initExtra = ''

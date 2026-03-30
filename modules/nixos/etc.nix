@@ -9,6 +9,7 @@
             "steam-unwrapped"
             "1password-cli"
             "discord"
+            "virtualbox-extpack"
         ];
 
         environment.systemPackages = with pkgs; [
@@ -21,6 +22,7 @@
             cargo
             rustc
             rust-analyzer
+            man-pages
 
             # graphics
             clinfo
