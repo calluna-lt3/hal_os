@@ -155,7 +155,7 @@ local config = {
         ["*-SEMICOLON"] = function()
             return ModeManager:toggle("wide")
         end,
-        ["Shift-N"] = function()
+        ["Shift-TAB"] = function()
             ensure_ninjabrain()
             helpers.toggle_floating()
         end,
