@@ -1,13 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
-    options.vbox.enable = lib.mkEnableOption "gitgitgit";
+    options.vbox.enable = lib.mkEnableOption "boxboxbox";
     config = lib.mkIf config.vbox.enable {
-        environment.systemPackages = with pkgs; [
-            gnome-boxes
-            dnsmasq
-        ];
-
+        environment.systemPackages = with pkgs; [ dnsmasq ];
         users.groups.libvirtd.members = [ "mlwpsh" ];
         users.groups.kvm.members = [ "mlwpsh" ];
         users.groups.vboxusers.members = [ "mlwpsh" ];

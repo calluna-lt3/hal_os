@@ -48,6 +48,7 @@ inputs.nixpkgs.lib.nixosSystem {
             lua.enable = true;
             mcsr.enable = true;
             vbox.enable = true;
+            qemu.enable = true;
             etc.enable = true;
             home = {
                 "1password".enable = true;

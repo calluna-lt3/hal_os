@@ -9,8 +9,8 @@ local Processes = require("waywork.processes")
 local scene = Scene.SceneManager.new(waywall)
 local ModeManager = Modes.ModeManager.new(waywall)
 
-local normal_sens = 7.09446097
-local tall_sens = 0.47858809
+local normal_sens = 4.06 -- 24cm/360
+local tall_sens = 0.45
 
 local resolution = {
     default = {

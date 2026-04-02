@@ -14,6 +14,7 @@
         ./ssh.nix
         ./python.nix
         ./virtualbox.nix
+        ./qemu.nix
         ./etc.nix
     ];
 }
