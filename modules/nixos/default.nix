@@ -5,7 +5,7 @@
         ./mcsr
         ./neovim
         ./services
-        ./virtualization
+        ./virtualisation
         ./users.nix
         ./keyd.nix
         ./networking.nix

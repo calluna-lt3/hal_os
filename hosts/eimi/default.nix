@@ -40,6 +40,12 @@ inputs.nixpkgs.lib.nixosSystem {
                 proxmox-status.enable = true;
             };
 
+            virtualisation = {
+                enable = true;
+                qemu.enable = true;
+                vbox.enable = true;
+            };
+
             sops.enable = true;
             sway.enable = true;
             keyd.enable = true;
@@ -47,8 +53,6 @@ inputs.nixpkgs.lib.nixosSystem {
             python.enable = true;
             lua.enable = true;
             mcsr.enable = true;
-            vbox.enable = true;
-            qemu.enable = true;
             etc.enable = true;
             home = {
                 "1password".enable = true;

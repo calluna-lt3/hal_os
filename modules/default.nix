@@ -1,7 +1,6 @@
 { ... }:
 
 {
-
     # order matters
     imports = [
         ./nixos
