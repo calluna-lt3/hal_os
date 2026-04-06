@@ -9,6 +9,7 @@
             grim
             slurp
             wl-clipboard
+            wl-mirror
         ];
 
         programs.sway = {

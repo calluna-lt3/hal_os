@@ -2,9 +2,10 @@
 
 {
     imports = [
-        ./services
-        ./neovim
         ./mcsr
+        ./neovim
+        ./services
+        ./virtualization
         ./users.nix
         ./keyd.nix
         ./networking.nix
@@ -13,8 +14,6 @@
         ./lua.nix
         ./ssh.nix
         ./python.nix
-        ./virtualbox.nix
-        ./qemu.nix
         ./etc.nix
     ];
 }
