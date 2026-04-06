@@ -263,14 +263,15 @@
                 enable = true;
                 servers = {
                     clangd.enable = true;
+                    lua_ls.enable = true;
+                    nil_ls.enable = true;
+                    pyright.enable = true;
                     rust_analyzer = {
                         enable = true;
                         installCargo = false;
                         installRustc = false;
                     };
-                    lua_ls.enable = true;
-                    nil_ls.enable = true;
-                    pyright.enable = true;
+                    terraform_lsp.enable = true;
                     ts_ls.enable = true;
                 };
 

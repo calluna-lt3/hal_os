@@ -10,6 +10,7 @@
             "1password-cli"
             "discord"
             "virtualbox-extpack"
+            "terraform"
         ];
 
         environment.systemPackages = with pkgs; [
@@ -51,6 +52,7 @@
 
             ccache
             temurin-bin-17
+            terraform
         ];
 
         fonts.packages = with pkgs; [
