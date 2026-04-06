@@ -5,8 +5,8 @@
         ./qemu.nix
         ./virtualbox.nix
     ];
-    options.virtualisation.enable = lib.mkEnableOption "common virt settings";
-    config = lib.mkIf config.virtualisation.enable {
+    options.mallows.virtualisation.enable = lib.mkEnableOption "common virt settings";
+    config = lib.mkIf config.mallows.virtualisation.enable {
         users.groups.libvirtd.members = [ "mlwpsh" ];
         users.groups.kvm.members = [ "mlwpsh" ];
         virtualisation = {

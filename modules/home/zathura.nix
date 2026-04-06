@@ -1,8 +1,8 @@
 { config, lib, pkgs, ...}:
 
 {
-    options.home.zathura.enable = lib.mkEnableOption "wp";
-    config = lib.mkIf config.home.zathura.enable {
+    options.mallows.home.zathura.enable = lib.mkEnableOption "wp";
+    config = lib.mkIf config.mallows.home.zathura.enable {
         home-manager.users."mlwpsh".programs.zathura = {
             enable = true;
             options = {

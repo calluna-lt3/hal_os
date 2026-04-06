@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-    options.sops.enable = lib.mkEnableOption "shout out puppies, #swag";
-    config = lib.mkIf config.sops.enable {
+    options.mallows.sops.enable = lib.mkEnableOption "shout out puppies, #swag";
+    config = lib.mkIf config.mallows.sops.enable {
         environment.systemPackages = with pkgs; [ sops ];
 
         sops.defaultSopsFile = ../../secrets/secrets.yaml;

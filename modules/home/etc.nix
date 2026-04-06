@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
-    options.home.etc.enable = lib.mkEnableOption "etc !! etc !!";
-    config = lib.mkIf config.home.etc.enable {
+    options.mallows.home.etc.enable = lib.mkEnableOption "etc !! etc !!";
+    config = lib.mkIf config.mallows.home.etc.enable {
         home-manager.users."mlwpsh" = {
             home.packages = with pkgs; [
                 discord

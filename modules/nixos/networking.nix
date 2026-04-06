@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-    options.networking = {
+    options.mallows.networking = {
         enable = lib.mkEnableOption "iwd + dhcpcd stack";
         hostname = lib.mkOption {
             description = "system hostname";
@@ -9,8 +9,8 @@
         };
     };
 
-    config = lib.mkIf config.networking.enable {
-        networking.hostName = config.networking.hostname;
+    config = lib.mkIf config.mallows.networking.enable {
+        networking.hostName = config.mallows.networking.hostname;
         networking.dhcpcd.enable = true;
         networking.wireless.iwd = {
             enable = true;

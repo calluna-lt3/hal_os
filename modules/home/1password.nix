@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
-    options.home."1password".enable = lib.mkEnableOption "1pawsword";
-    config = lib.mkIf config.home."1password".enable {
+    options.mallows.home."1password".enable = lib.mkEnableOption "1pawsword";
+    config = lib.mkIf config.mallows.home."1password".enable {
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
             "1password-cli"
         ];

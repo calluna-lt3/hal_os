@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
-    options.home.git.enable = lib.mkEnableOption "gitgitgit";
-    config = lib.mkIf config.home.git.enable {
+    options.mallows.home.git.enable = lib.mkEnableOption "gitgitgit";
+    config = lib.mkIf config.mallows.home.git.enable {
         home-manager.users."mlwpsh".programs.git = {
             # set ur rebase/merge default actions !!
             enable = true;

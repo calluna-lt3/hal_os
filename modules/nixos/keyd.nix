@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-    options.keyd.enable = lib.mkEnableOption "f3f3f3f3f3";
-    config = lib.mkIf config.keyd.enable {
+    options.mallows.keyd.enable = lib.mkEnableOption "f3f3f3f3f3";
+    config = lib.mkIf config.mallows.keyd.enable {
         users.users."mlwpsh".extraGroups = [ "keyd" ];
         systemd.services.keyd.wantedBy = lib.mkForce [ ];
         services.keyd = {

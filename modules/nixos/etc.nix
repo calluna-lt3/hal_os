@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-    options.etc.enable = lib.mkEnableOption "etc ####";
-    config = lib.mkIf config.etc.enable {
+    options.mallows.etc.enable = lib.mkEnableOption "etc ####";
+    config = lib.mkIf config.mallows.etc.enable {
         # TODO: figure out how to put this in modules
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
             "steam"

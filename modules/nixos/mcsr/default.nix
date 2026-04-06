@@ -3,8 +3,8 @@ let
     mcsrPkgs = inputs.mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
 in {
     imports = [ inputs.mcsr-nixos.nixosModules.waywall ];
-    options.mcsr.enable = lib.mkEnableOption "mcsr";
-    config = lib.mkIf config.mcsr.enable {
+    options.mallows.mcsr.enable = lib.mkEnableOption "mcsr";
+    config = lib.mkIf config.mallows.mcsr.enable {
         environment.systemPackages = with pkgs; [
             mcsrPkgs.ninjabrain-bot
             (prismlauncher.override {

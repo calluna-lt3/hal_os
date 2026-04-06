@@ -31,36 +31,38 @@ inputs.nixpkgs.lib.nixosSystem {
 
             programs.nix-ld.enable = true;
 
-            networking = {
-                enable = true;
-                hostname = "eimi";
-            };
+            mallows = {
+                networking = {
+                    enable = true;
+                    hostname = "eimi";
+                };
 
-            services = {
-                proxmox-status.enable = true;
-            };
+                services = {
+                    proxmox-status.enable = true;
+                };
 
-            virtualisation = {
-                enable = true;
-                qemu.enable = true;
-                vbox.enable = true;
-            };
+                virtualisation = {
+                    enable = true;
+                    qemu.enable = true;
+                    vbox.enable = true;
+                };
 
-            sops.enable = true;
-            sway.enable = true;
-            keyd.enable = true;
-            ssh.enable = true;
-            python.enable = true;
-            lua.enable = true;
-            mcsr.enable = true;
-            etc.enable = true;
-            home = {
-                "1password".enable = true;
-                steam.enable = true;
-                bash.enable = true;
-                git.enable = true;
-                zathura.enable = true;
+                sops.enable = true;
+                sway.enable = true;
+                keyd.enable = true;
+                ssh.enable = true;
+                python.enable = true;
+                lua.enable = true;
+                mcsr.enable = true;
                 etc.enable = true;
+                home = {
+                    "1password".enable = true;
+                    steam.enable = true;
+                    bash.enable = true;
+                    git.enable = true;
+                    zathura.enable = true;
+                    etc.enable = true;
+                };
             };
 
             # <3

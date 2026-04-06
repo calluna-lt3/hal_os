@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
-    options.verdant.wireguard.enable = lib.mkEnableOption "wireguarddddd";
-    config = lib.mkIf config.verdant.wireguard.enable {
+    options.mallows.verdant.wireguard.enable = lib.mkEnableOption "wireguarddddd";
+    config = lib.mkIf config.mallows.verdant.wireguard.enable {
         sops.secrets."wireguard/preshared/verdant" = { };
         sops.secrets."wireguard/private/verdant" = { };
         sops.secrets."wireguard/public/verdant" = { };

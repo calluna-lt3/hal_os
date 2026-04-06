@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
-    options.home.bash.enable = lib.mkEnableOption "bash v_v";
-    config = lib.mkIf config.home.bash.enable {
+    options.mallows.home.bash.enable = lib.mkEnableOption "bash v_v";
+    config = lib.mkIf config.mallows.home.bash.enable {
         home-manager.users."mlwpsh".programs.bash = {
             enable = true;
             enableCompletion = true;

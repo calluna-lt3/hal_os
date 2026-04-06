@@ -18,32 +18,34 @@ inputs.nixpkgs.lib.nixosSystem {
 
             services.libinput.enable = true;
 
-            networking = {
-                enable = true;
-                hostname = "verdant";
-            };
+            programs.nix-ld.enable = true;
 
-            verdant = {
-                wireguard.enable = true;
-            };
+            mallows = {
+                networking = {
+                    enable = true;
+                    hostname = "verdant";
+                };
 
-            sops.enable = true;
-            ssh.enable = true;
-            sway.enable = true;
-            python.enable = true;
-            lua.enable = true;
-            qemu.enable = true;
-            etc.enable = true;
-            home = {
-                "1password".enable = true;
-                bash.enable = true;
-                steam.enable = false;
-                git.enable = true;
-                zathura.enable = true;
+                verdant = {
+                    wireguard.enable = true;
+                };
+
+                sops.enable = true;
+                ssh.enable = true;
+                sway.enable = true;
+                python.enable = true;
+                lua.enable = true;
+                qemu.enable = true;
                 etc.enable = true;
+                home = {
+                    "1password".enable = true;
+                    bash.enable = true;
+                    steam.enable = false;
+                    git.enable = true;
+                    zathura.enable = true;
+                    etc.enable = true;
+                };
             };
-
-            programs.nix-ld.enable = true; # ?
 
             # :<
             system.stateVersion = "25.11";

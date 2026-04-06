@@ -2,8 +2,8 @@
 
 {
     # TODO: home manage this
-    options.sway.enable = lib.mkEnableOption "swayyy >->";
-    config = lib.mkIf config.sway.enable {
+    options.mallows.sway.enable = lib.mkEnableOption "swayyy >->";
+    config = lib.mkIf config.mallows.sway.enable {
         environment.systemPackages = with pkgs; [
             bemenu # TODO: module
             grim

@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-    options.ssh.enable = lib.mkEnableOption "opawnssh";
-    config = lib.mkIf config.ssh.enable {
+    options.mallows.ssh.enable = lib.mkEnableOption "opawnssh";
+    config = lib.mkIf config.mallows.ssh.enable {
         services.openssh = {
             enable = true;
             settings.PasswordAuthentication = false;
