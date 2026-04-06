@@ -1,8 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-    # included vased on qemu.enable ?
-    modules = [
+    imports = [
         ./common.nix
     ];
     options.qemu.enable = lib.mkEnableOption "queue emo";
