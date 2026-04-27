@@ -17,7 +17,6 @@
                 strawberry
                 krita
                 weechat
-                lutris
                 rustfmt
                 thunar
             ];

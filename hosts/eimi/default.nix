@@ -30,6 +30,7 @@ inputs.nixpkgs.lib.nixosSystem {
             };
 
             programs.nix-ld.enable = true;
+            virtualisation.docker.enable = true;
 
             mallows = {
                 networking = {

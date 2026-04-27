@@ -8,7 +8,10 @@ in {
         environment.systemPackages = with pkgs; [
             mcsrPkgs.ninjabrain-bot
             (prismlauncher.override {
-                jdks = [ mcsrPkgs.graalvm-21 ];
+                jdks = [
+                    mcsrPkgs.graalvm-21
+                    pkgs.jre8
+                ];
             })
         ];
 

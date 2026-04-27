@@ -11,6 +11,7 @@
             "discord"
             "virtualbox-extpack"
             "terraform"
+            "osu-lazer-bin"
         ];
 
         environment.systemPackages = with pkgs; [
@@ -53,6 +54,8 @@
             ccache
             temurin-bin-17
             terraform
+            osu-lazer-bin
+            croc
         ];
 
         fonts.packages = with pkgs; [

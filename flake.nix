@@ -23,8 +23,7 @@
     };
 
     outputs = { self, nixpkgs, mcsr-nixos, ... } @ inputs:
-    let
-    in {
+    {
         nixosConfigurations = {
             eimi    = import ./hosts/eimi    { inherit inputs; };
             verdant = import ./hosts/verdant { inherit inputs; };
