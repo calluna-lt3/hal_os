@@ -7,6 +7,7 @@
         ./zathura.nix
         ./git.nix
         ./steam.nix
+        ./sway.nix
         ./etc.nix
     ];
 

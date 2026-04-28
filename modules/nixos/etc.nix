@@ -59,6 +59,7 @@
         ];
 
         fonts.packages = with pkgs; [
+            lohit-fonts.gujarati
             ibm-plex
         ];
     };

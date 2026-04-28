@@ -9,7 +9,14 @@ inputs.nixpkgs.lib.nixosSystem {
         inputs.nixvim.nixosModules.nixvim
         ./hardware.nix
         ../../modules
-        ({ config, ... } :{
+        ({ config, ... }:
+
+        let
+            home = config.users.users.mlwpsh.home;
+            sway = {
+                mod = config.home-manager.users."mlwpsh".wayland.windowManager.sway.config.modifier;
+            };
+        in {
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
             boot.loader.systemd-boot.enable = true;
             boot.loader.efi.canTouchEfiVariables = true;
@@ -37,7 +44,6 @@ inputs.nixpkgs.lib.nixosSystem {
 
                 sops.enable = true;
                 ssh.enable = true;
-                sway.enable = true;
                 python.enable = true;
                 lua.enable = true;
                 etc.enable = true;
@@ -48,6 +54,34 @@ inputs.nixpkgs.lib.nixosSystem {
                     git.enable = true;
                     zathura.enable = true;
                     etc.enable = true;
+                    sway = {
+                        enable = true;
+                        input = {
+                            "1739:52544:SYNA7DAB:01_06CB:CD40_Touchpad" = {
+                                dwt = "enabled";
+                                tap = "enabled";
+                                middle_emulation = "enabled";
+                                natural_scroll = "enabled";
+                            };
+                        };
+                        output = {
+                            "*" = {
+                                bg = "${home}/media/image/bgr/active.png fill";
+                            };
+                            "eDP-1" = {
+                                mode = "1920x1080@60Hz";
+                                pos = "0 0";
+                            };
+                        };
+                        extraKeybindings = {
+                            "${sway.mod}+n" = "exec brightnessctl s 10%-";
+                            "${sway.mod}+m" = "exec brightnessctl s +10%";
+                        };
+                        startup = [
+                            { command = "exec foot tmux"; }
+                            { command = "exec librewolf"; }
+                        ];
+                    };
                 };
             };
 
