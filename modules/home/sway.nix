@@ -10,16 +10,17 @@ let
     term = "foot";
     menu = "bemenu-run -i --binding vim";
 
-    ws1 = "1:૮";
-    ws2 = "2:˃";
-    ws3 = "3:ﻌ";
-    ws4 = "4:˂";
-    ws5 = "5:ა";
-    ws6 = "6:‾";
-    ws7 = "7:⁺";
-    ws8 = "8:+";
-    ws9 = "9:₊";
-    ws10 = "10:_";
+    # can we do this programatically please so we dont define it 10 times
+    ws1 = config.mallows.home.sway.workspaces.ws1;
+    ws2 = config.mallows.home.sway.workspaces.ws2;
+    ws3 = config.mallows.home.sway.workspaces.ws3;
+    ws4 = config.mallows.home.sway.workspaces.ws4;
+    ws5 = config.mallows.home.sway.workspaces.ws5;
+    ws6 = config.mallows.home.sway.workspaces.ws6;
+    ws7 = config.mallows.home.sway.workspaces.ws7;
+    ws8 = config.mallows.home.sway.workspaces.ws8;
+    ws9 = config.mallows.home.sway.workspaces.ws9;
+    ws10 = config.mallows.home.sway.workspaces.ws10;
 in {
     options.mallows.home.sway = {
         enable = lib.mkEnableOption "saww youuu";
@@ -43,7 +44,34 @@ in {
             type = lib.types.listOf lib.types.attrs;
             default = [ ];
         };
-        # TODO: workspaces
+        # assigned this here because we dont have a good way of referencing
+        # ws1 .. ws10 in our host configuration
+        workspaces = lib.mkOption {
+            description = "which monitor workspaces get assigned to !!";
+            type = lib.types.attrs;
+            default = {
+                ws1 = "1:૮";
+                ws2 = "2:˃";
+                ws3 = "3:ﻌ";
+                ws4 = "4:˂";
+                ws5 = "5:ა";
+                ws6 = "6:‾";
+                ws7 = "7:⁺";
+                ws8 = "8:+";
+                ws9 = "9:₊";
+                ws10 = "10:_";
+            };
+        };
+        workspaceOutputAssign = lib.mkOption {
+            description = "names of workspaces";
+            type = lib.types.listOf lib.types.attrs;
+            default = [ ];
+        };
+        assigns = lib.mkOption {
+            description = "assign programs -> workspaces";
+            type = lib.types.attrs;
+            default = { };
+        };
     };
     config = lib.mkIf config.mallows.home.sway.enable {
         environment.systemPackages = with pkgs; [
@@ -63,6 +91,8 @@ in {
                 input = config.mallows.home.sway.input;
                 output = config.mallows.home.sway.output;
                 startup = config.mallows.home.sway.startup;
+                workspaceOutputAssign = config.mallows.home.sway.workspaceOutputAssign;
+                assigns  = config.mallows.home.sway.assigns;
                 left = "${left}";
                 down = "${down}";
                 up = "${up}";

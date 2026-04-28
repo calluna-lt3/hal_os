@@ -15,6 +15,16 @@ inputs.nixpkgs.lib.nixosSystem {
             home = config.users.users.mlwpsh.home;
             sway = {
                 mod = config.home-manager.users."mlwpsh".wayland.windowManager.sway.config.modifier;
+                ws1 = config.mallows.home.sway.workspaces.ws1;
+                ws2 = config.mallows.home.sway.workspaces.ws2;
+                ws3 = config.mallows.home.sway.workspaces.ws3;
+                ws4 = config.mallows.home.sway.workspaces.ws4;
+                ws5 = config.mallows.home.sway.workspaces.ws5;
+                ws6 = config.mallows.home.sway.workspaces.ws6;
+                ws7 = config.mallows.home.sway.workspaces.ws7;
+                ws8 = config.mallows.home.sway.workspaces.ws8;
+                ws9 = config.mallows.home.sway.workspaces.ws9;
+                ws10 = config.mallows.home.sway.workspaces.ws10;
             };
         in {
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -78,9 +88,32 @@ inputs.nixpkgs.lib.nixosSystem {
                             "${sway.mod}+m" = "exec brightnessctl s +10%";
                         };
                         startup = [
-                            { command = "exec foot tmux"; }
-                            { command = "exec librewolf"; }
+                            { command = "foot tmux"; }
+                            { command = "librewolf"; }
                         ];
+                        workspaceOutputAssign = [
+                            { output = "eDP-1"; workspace = "${sway.ws1}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws2}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws3}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws4}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws5}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws6}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws7}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws8}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws9}"; }
+                            { output = "eDP-1"; workspace = "${sway.ws10}"; }
+                        ];
+                        assigns = {
+                            "${sway.ws1}" = [
+                                { app_id = "mpv"; }
+                            ];
+                            "${sway.ws2}" = [
+                                { app_id = "librewolf"; }
+                            ];
+                            "${sway.ws3}" = [
+                                { class = "vesktop"; }
+                            ];
+                        };
                     };
                 };
             };
