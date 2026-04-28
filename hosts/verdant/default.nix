@@ -30,12 +30,16 @@ inputs.nixpkgs.lib.nixosSystem {
                     wireguard.enable = true;
                 };
 
+                virtualisation = {
+                    enable = true;
+                    qemu.enable = true;
+                };
+
                 sops.enable = true;
                 ssh.enable = true;
                 sway.enable = true;
                 python.enable = true;
                 lua.enable = true;
-                qemu.enable = true;
                 etc.enable = true;
                 home = {
                     "1password".enable = true;
