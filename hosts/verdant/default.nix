@@ -66,6 +66,25 @@ inputs.nixpkgs.lib.nixosSystem {
                     etc.enable = true;
                     sway = {
                         enable = true;
+                        startup = [
+                            { command = "foot tmux"; }
+                            { command = "librewolf"; }
+                        ];
+                        assigns = {
+                            "${sway.ws1}" = [
+                                { app_id = "mpv"; }
+                            ];
+                            "${sway.ws2}" = [
+                                { app_id = "librewolf"; }
+                            ];
+                            "${sway.ws3}" = [
+                                { class = "vesktop"; }
+                            ];
+                        };
+                        extraKeybindings = {
+                            "${sway.mod}+n" = "exec brightnessctl s 10%-";
+                            "${sway.mod}+m" = "exec brightnessctl s +10%";
+                        };
                         input = {
                             "1739:52544:SYNA7DAB:01_06CB:CD40_Touchpad" = {
                                 dwt = "enabled";
@@ -83,14 +102,6 @@ inputs.nixpkgs.lib.nixosSystem {
                                 pos = "0 0";
                             };
                         };
-                        extraKeybindings = {
-                            "${sway.mod}+n" = "exec brightnessctl s 10%-";
-                            "${sway.mod}+m" = "exec brightnessctl s +10%";
-                        };
-                        startup = [
-                            { command = "foot tmux"; }
-                            { command = "librewolf"; }
-                        ];
                         workspaceOutputAssign = [
                             { output = "eDP-1"; workspace = "${sway.ws1}"; }
                             { output = "eDP-1"; workspace = "${sway.ws2}"; }
@@ -103,17 +114,6 @@ inputs.nixpkgs.lib.nixosSystem {
                             { output = "eDP-1"; workspace = "${sway.ws9}"; }
                             { output = "eDP-1"; workspace = "${sway.ws10}"; }
                         ];
-                        assigns = {
-                            "${sway.ws1}" = [
-                                { app_id = "mpv"; }
-                            ];
-                            "${sway.ws2}" = [
-                                { app_id = "librewolf"; }
-                            ];
-                            "${sway.ws3}" = [
-                                { class = "vesktop"; }
-                            ];
-                        };
                     };
                 };
             };
