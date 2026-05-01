@@ -10,7 +10,7 @@
             path = [ pkgs.netcat-gnu ];
             serviceConfig = {
                 Type = "simple";
-                ExecStart = "${pkgs.bash}/bin/bash /home/mlwpsh/.config/sway/bar/proxmox-status.sh";
+                ExecStart = "${pkgs.bash}/bin/bash /home/mlwpsh/.scripts/sway-bar/proxmox-status.sh";
                 Restart = "on-failure";
                 RestartSec = 2;
             };

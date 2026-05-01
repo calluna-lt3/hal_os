@@ -86,6 +86,7 @@ in {
 
         home-manager.users."mlwpsh".wayland.windowManager.sway = {
             enable = true;
+            wrapperFeatures.gtk = true;
             checkConfig = false;
             config = {
                 input = config.mallows.home.sway.input;
@@ -190,10 +191,10 @@ in {
                     position = "top";
                     trayOutput = null;
                     workspaceNumbers = false;
-                    statusCommand = "while ${config.users.users.mlwpsh.home}/.scripts/bar.sh; do sleep 1; done";
+                    statusCommand = "while ${config.users.users.mlwpsh.home}/.scripts/sway-bar/bar.sh; do sleep 1; done";
                     fonts = {
                         names = [ "IBM Plex Mono" ];
-                        size = 11.;
+                        size = 10.;
                     };
                     colors = {
                         statusline = "#e1dcdc";

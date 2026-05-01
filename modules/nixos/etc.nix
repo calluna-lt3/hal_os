@@ -56,6 +56,8 @@
             terraform
             osu-lazer-bin
             croc
+            xdg-desktop-portal-wlr
+            vesktop
         ];
 
         fonts.packages = with pkgs; [
