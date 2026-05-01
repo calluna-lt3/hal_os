@@ -57,6 +57,7 @@ inputs.nixpkgs.lib.nixosSystem {
 
                 services = {
                     proxmox-status.enable = true;
+                    mpd.enable = true;
                 };
 
                 virtualisation = {
@@ -104,6 +105,7 @@ inputs.nixpkgs.lib.nixosSystem {
                                 { class = "tf_linux64"; }
                                 { class = "Celeste"; }
                                 { class = "factorio"; }
+                                { class = "Nomi-CEu — Normal Mode — v1.7.7"; }
                                 { app_id = "waywall"; }
                             ];
                             "${sway.ws6}" = [
