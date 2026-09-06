@@ -12,6 +12,7 @@
             "virtualbox-extpack"
             "terraform"
             "osu-lazer-bin"
+            "reaper"
         ];
 
         environment.systemPackages = with pkgs; [
@@ -58,10 +59,16 @@
             croc
             xdg-desktop-portal-wlr
             vesktop
+            xhost
+            xauth
+            xdg-utils
+            restic
+            cifs-utils
         ];
 
         fonts.packages = with pkgs; [
             lohit-fonts.gujarati
+            noto-fonts-cjk-sans
             ibm-plex
         ];
     };

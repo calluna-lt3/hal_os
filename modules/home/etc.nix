@@ -19,6 +19,10 @@
                 weechat
                 rustfmt
                 thunar
+                cockatrice
+                calibre
+                reaper
+                protontricks
             ];
         };
     };

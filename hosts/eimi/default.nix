@@ -156,16 +156,18 @@ inputs.nixpkgs.lib.nixosSystem {
                         };
                         output = {
                             "*" = {
-                                bg = "${home}/storage/media/image/backgrounds/bgr.png fill";
+                                # bg = "${home}/storage/media/image/backgrounds/bgr.png fill";
                             };
                             "DP-3" = {
                                 mode = "1920x1080@144Hz";
                                 pos = "0 0";
+                                bg = "${home}/storage/media/image/backgrounds/please.jpg fill";
                             };
                             "DP-1" = {
                                 mode = "1920x1080@144Hz";
                                 transform = "90";
                                 pos = "1920 0";
+                                bg = "${home}/storage/media/image/backgrounds/yes.jpg fill";
                             };
                         };
                         workspaceOutputAssign = [

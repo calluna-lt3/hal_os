@@ -36,7 +36,7 @@
                 ".." = "cd ./..";
                 "..." = "cd ./../..";
                 "...." = "cd ./../../..";
-                "vp" = "zathura ";
+                "vp" = "zathura";
                 "vi" = "nvim";
                 "vim" = "nvim";
                 "pet" = "touch";

@@ -12,7 +12,7 @@
             isNormalUser = true;
             hashedPasswordFile = config.sops.secrets."users/mlwpsh/hashed".path;
             home = "/home/mlwpsh";
-            extraGroups = [ "wheel" ];
+            extraGroups = [ "wheel" "docker" ];
         };
     };
 }
